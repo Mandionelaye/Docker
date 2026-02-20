@@ -1,0 +1,69 @@
+Crée une application complète en Node.js, entièrement conteneurisée avec Docker. L'application doit être simple mais fonctionnelle pour servir de projet de test pour un agent IA.
+
+Exigences techniques :
+
+Backend Node.js
+
+Utiliser Node.js (LTS)
+
+Utiliser un framework léger comme Express
+
+Inclure au minimum une route :
+
+GET /health → renvoie { status: "ok" }
+
+Structure propre du projet (src/, routes/, controllers/, etc.)
+
+Docker
+
+Écrire un Dockerfile optimisé (multi-stage si nécessaire)
+
+Écrire un fichier docker-compose.yml permettant :
+
+Lancement de l’app
+
+Auto-reload en mode dev (avec volumes)
+
+Inclure les bonnes pratiques : .dockerignore, variables d’environnement…
+
+Scripts
+
+Ajouter dans package.json :
+
+start
+
+dev (avec nodemon)
+
+Ajouter un exemple de .env
+
+Documentation
+
+Générer un fichier README.md contenant :
+
+Instructions d’installation
+
+Commandes (Node et Docker)
+
+Description de l’API
+
+Exemple de curl pour tester /health
+
+Livrables attendus
+
+Arborescence complète du projet
+
+Tout le code source
+
+Dockerfile
+
+docker-compose.yml
+
+README.md prêt à l’emploi
+
+Style attendu :
+
+Réponses structurées et détaillées
+
+Code propre et conforme aux bonnes pratiques
+
+Pas de blabla inutile → orienté solution

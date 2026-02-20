@@ -1,0 +1,25 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Installer nodemon globalement
+RUN npm install -g nodemon
+
+# Copier les fichiers de dépendances
+COPY package*.json ./
+
+# Installer toutes les dépendances (y compris dev)
+RUN npm install
+
+# Copier le code source (sauf node_modules et package files déjà copiés)
+COPY src/ ./src/
+COPY .env.example ./
+
+# Exposer le port
+EXPOSE 3000
+
+# Copier le fichier .env s'il existe (gestion d'erreur pour Docker)
+RUN if [ -f .env ]; then cp .env .; fi
+
+# Commande de démarrage en mode développement
+CMD ["npm", "run", "dev"]

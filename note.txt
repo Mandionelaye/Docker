@@ -1,0 +1,5 @@
+Pour docker-compose.yml 
+Il contient les images qui sont les versions des dépendances du projet 
+
+Pour Dokerfile
+il contient tout la configuration de notre docker
